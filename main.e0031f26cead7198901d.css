@@ -300,7 +300,7 @@ body a{
     }
 
     #nav{
-        z-index: 1;
+        z-index: 9999;
         flex-direction: row;
         top: 0;
         height: fit-content;
@@ -325,7 +325,7 @@ body a{
         height: auto;
         padding-top: 3rem;
         width: 100vw;
-        box-shadow: 0rem 0rem 1rem 0.1rem #000000;
+        box-shadow: none;
         background-color:var(--bgColor);
     }
 
