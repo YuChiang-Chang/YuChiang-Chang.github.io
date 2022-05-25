@@ -45,9 +45,9 @@ body a{
     font-weight: 500;
 }
 
-#open-right-navbtn-1024{
+/* #open-right-navbtn-1024{
     display: none;
-}
+} */
 
 #nav a{
     /* color: white; */
@@ -96,7 +96,7 @@ body a{
     overflow-x: hidden;
 }
 
-#close-right-navbtn{
+#close-about-btn{
     text-decoration: none;
     font-size: 2rem;
     position: absolute;
@@ -315,13 +315,14 @@ body a{
         padding: 1rem 1rem;
     }
 
-    #open-right-navbtn-1024{
+    /* #open-right-navbtn-1024{
         display: initial;
-    }
+    } */
 
     #about{
         flex:   auto;
         position: static;
+        display: block;
         height: auto;
         padding-top: 3rem;
         width: 100vw;
@@ -329,7 +330,7 @@ body a{
         background-color:var(--bgColor);
     }
 
-    #close-right-navbtn{
+    #close-about-btn{
         display: none;
     }
 
