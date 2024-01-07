@@ -138,6 +138,7 @@ body a{
     /* border-color: #ffffff; */
     /* width: fit-content; */
     max-width: 42vw;
+    width: 42vw;
     transition: 0.5s;
     box-shadow: 0rem 0rem 1rem 0.1rem #000000;
 }
