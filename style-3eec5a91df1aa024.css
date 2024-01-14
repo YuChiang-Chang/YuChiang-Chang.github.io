@@ -44,11 +44,11 @@ nav {
   top: 0;
   left: 0;
   right: calc(50% + var(--nav-width));
+  transition: 0.5s;
   min-width: fit-content;
   justify-content: center;
   box-shadow: 0.3rem 0rem 0.5rem 0.1rem #000000;
   text-align: right;
-  transition: 0.5s;
 }
 nav:hover {
   box-shadow: 0.3rem 0rem 1.5rem 0.5rem #000000;
@@ -169,6 +169,7 @@ main .work .gallery__item img {
 }
 main .work .gallery__item img:hover {
   opacity: 1;
+  box-shadow: none;
 }
 main .work .thumbnail {
   margin: 0.5rem;
