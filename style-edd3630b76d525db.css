@@ -1,0 +1,351 @@
+.dark-mode {
+  --fontColor: #eeeeee;
+  --bgColor: #121212;
+  color: var(--fontColor);
+  background-color: var(--bgColor);
+}
+.dark-mode a {
+  color: #8490ff;
+}
+.dark-mode nav {
+  background-color: var(--bgColor);
+}
+.dark-mode nav a {
+  color: var(--fontColor);
+}
+.dark-mode nav a:hover {
+  background-color: #222222;
+}
+.dark-mode .profile {
+  background-color: #222222;
+}
+.dark-mode .profile a {
+  color: #808080;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.dark-mode .profile a:hover {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+body {
+  --nav-width: 25vw;
+  --profile-width: 25vw;
+  overflow: auto;
+}
+
+nav {
+  z-index: 99;
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: calc(50% + var(--nav-width));
+  min-width: fit-content;
+  justify-content: center;
+  box-shadow: 0.3rem 0rem 0.5rem 0.1rem #000000;
+  text-align: right;
+  transition: 0.5s;
+}
+nav:hover {
+  box-shadow: 0.3rem 0rem 1.5rem 0.5rem #000000;
+  transition: 0.5s;
+  transform: scale(1.01);
+}
+nav ul {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  transition: 0.5s;
+}
+
+.profile {
+  transition: 0.5s;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: calc(50% + var(--profile-width));
+  right: 0;
+  overflow-x: hidden;
+  box-shadow: inset 0.3rem 0rem 0.5rem 0.2rem #000000, 0.3rem 0rem 0.5rem 0.2rem #000000;
+  padding: 4vmin;
+  box-sizing: border-box;
+}
+.profile:hover {
+  box-shadow: inset 0rem 0rem 0rem 0rem #000000, -0.3rem 0rem 1.5rem 0.2rem #000000;
+  transform: scale(1.01);
+}
+.profile a {
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.profile .profile-close-button {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  align-items: center;
+  display: inline-flex;
+}
+
+main {
+  box-sizing: border-box;
+  margin-left: calc(50% - var(--nav-width));
+  margin-right: calc(50% - var(--profile-width));
+  transition: 0.5s;
+  padding: 0rem 0.5rem;
+}
+main .h1-hr {
+  width: 12rem;
+  margin: 1rem 0;
+}
+main .portfolio {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+main .work {
+  box-sizing: border-box;
+  background-color: #191919;
+  margin: 1rem;
+  padding: 1.5rem;
+  min-height: 10rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  transition: 0.5s;
+  box-shadow: 0rem 0rem 0.5rem 0.1rem #000000;
+}
+main .work:hover {
+  box-shadow: 0rem 0rem 1.5rem 0.5rem #000000;
+  transform: scale(1.02);
+}
+main .work img,
+main .work video {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+main .work img:hover,
+main .work video:hover {
+  box-shadow: 0rem 0rem 1.5rem 0.5rem #000000;
+}
+main .work .hover-shadow {
+  transition: 0.3s;
+}
+main .work .gallery {
+  display: flex;
+  flex-flow: column wrap;
+}
+main .work .gallery__item {
+  margin: 0.5rem;
+  max-width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  align-self: center;
+}
+main .work .gallery__item img {
+  opacity: 0.5;
+  height: auto;
+  width: auto;
+  max-width: 45%;
+  max-height: 10vh;
+  display: inline;
+}
+main .work .gallery__item img:hover {
+  opacity: 1;
+}
+main .work .thumbnail {
+  margin: 0.5rem;
+  max-height: 10vh;
+  align-self: center;
+}
+main .work .thumbnail img {
+  opacity: 0.5;
+}
+main .work .thumbnail img:hover {
+  opacity: 1;
+}
+main .work .work-content {
+  max-width: fit-content;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 5rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+}
+.modal .modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+.modal .modal-content .mySlides {
+  top: 0;
+}
+.modal .modal-content .mySlides img {
+  max-width: 100%;
+  max-height: 75vh;
+}
+.modal .modal-content .arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+.modal .modal-content .prev,
+.modal .modal-content .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  padding: 40vh 2rem;
+  color: rgb(150, 150, 150);
+  font-weight: bold;
+  font-size: 2rem;
+  user-select: none;
+  text-align: center;
+}
+.modal .modal-content .prev:hover,
+.modal .modal-content .next:hover {
+  color: white;
+}
+.modal .modal-content .prev {
+  left: 0;
+}
+.modal .modal-content .next {
+  right: 0;
+}
+.modal .modal-content .column {
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.modal .modal-content .column img {
+  max-height: 10vh;
+}
+.modal .modal-content .demo {
+  opacity: 0.6;
+}
+.modal .modal-content .demo:hover, .modal .modal-content .demo.active {
+  opacity: 1;
+}
+
+#modal-close {
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 1;
+}
+#modal-close:hover, #modal-close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalSlide {
+  display: none;
+}
+
+#modalImg {
+  display: none;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .dark-mode .profile {
+    background-color: var(--bgColor);
+  }
+  nav {
+    top: 0;
+    height: fit-content;
+    width: 100vw;
+    opacity: 0.95;
+    align-items: center;
+    box-shadow: 0rem 0rem 1rem 0.1rem #000000;
+    background-color: var(--bgColor);
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav a {
+    display: flex;
+  }
+  nav .nav-btn {
+    padding: 1rem 1rem;
+  }
+  main {
+    margin: 0;
+    right: 0;
+    padding: 0;
+  }
+  .profile {
+    position: static;
+    display: flex;
+    height: auto;
+    padding-top: 3rem;
+    margin: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .profile #profile-close-button {
+    display: none;
+  }
+  #content {
+    margin: 0;
+    width: 100vw;
+  }
+  .work {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 725px) {
+  .work img {
+    max-width: 100%;
+  }
+  nav li {
+    display: block;
+    flex-grow: 1;
+  }
+}
