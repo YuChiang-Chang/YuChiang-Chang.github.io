@@ -623,12 +623,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper3170 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 534, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper3257 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 563, __wbg_adapter_20);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper4772 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 624, __wbg_adapter_23);
+    imports.wbg.__wbindgen_closure_wrapper4859 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 653, __wbg_adapter_23);
         return addHeapObject(ret);
     };
 
@@ -670,7 +670,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('user_github_pages_yew-77750d48b419e339bcbb1af342bce355729f5bbb265788432b9844058d2ba66044ea213aa2044c6ebfee13ae4b6c2e3f_bg.wasm', import.meta.url);
+        input = new URL('user_github_pages_yew-3ef86561541cc65307c111737eeafac0f90e3b1e3053029288d5b1c55469e5835c23fdbfa38bb86475214a3ab5966c58_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
