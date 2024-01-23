@@ -1,38 +1,5 @@
-.dark-mode {
-  --fontColor: #eeeeee;
-  --bgColor: #121212;
-  color: var(--fontColor);
-  background-color: var(--bgColor);
-}
-.dark-mode a {
-  color: #8490ff;
-}
-.dark-mode nav {
-  background-color: var(--bgColor);
-}
-.dark-mode nav a {
-  color: var(--fontColor);
-}
-.dark-mode nav a:hover {
-  background-color: #222222;
-}
-.dark-mode .profile {
-  background-color: #222222;
-}
-.dark-mode .profile a {
-  color: #808080;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-.dark-mode .profile a:hover {
-  color: #ffffff;
-  background-color: #333333;
-}
-
-body {
-  --nav-width: 25vw;
+html {
   --profile-width: 25vw;
-  overflow: auto;
 }
 
 nav {
@@ -101,6 +68,41 @@ nav a:focus {
   border-radius: 50%;
   align-items: center;
   display: inline-flex;
+}
+
+.dark-mode {
+  --fontColor: #eeeeee;
+  --bgColor: #121212;
+  color: var(--fontColor);
+  background-color: var(--bgColor);
+}
+.dark-mode a {
+  color: #8490ff;
+}
+.dark-mode nav {
+  background-color: var(--bgColor);
+}
+.dark-mode nav a {
+  color: var(--fontColor);
+}
+.dark-mode nav a:hover {
+  background-color: #222222;
+}
+.dark-mode .profile {
+  background-color: #222222;
+}
+.dark-mode .profile a {
+  color: #808080;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.dark-mode .profile a:hover {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+body {
+  --nav-width: 25vw;
 }
 
 main {
@@ -349,8 +351,10 @@ main .work .work-content {
   .work img {
     max-width: 100%;
   }
-  nav li {
+  nav {
     display: block;
+  }
+  nav li {
     flex-grow: 1;
   }
 }

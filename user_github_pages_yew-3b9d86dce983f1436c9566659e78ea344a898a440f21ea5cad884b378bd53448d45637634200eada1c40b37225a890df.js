@@ -670,7 +670,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('user_github_pages_yew-3ef86561541cc65307c111737eeafac0f90e3b1e3053029288d5b1c55469e5835c23fdbfa38bb86475214a3ab5966c58_bg.wasm', import.meta.url);
+        input = new URL('user_github_pages_yew-3b9d86dce983f1436c9566659e78ea344a898a440f21ea5cad884b378bd53448d45637634200eada1c40b37225a890df_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
