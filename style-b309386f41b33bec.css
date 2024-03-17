@@ -19,7 +19,7 @@ nav {
 }
 nav:hover {
   box-shadow: 0.3rem 0rem 1.5rem 0.5rem #000000;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   transform: scale(1.01);
 }
 nav ul {
@@ -72,7 +72,7 @@ nav a:focus {
 
 .dark-mode {
   --fontColor: #eeeeee;
-  --bgColor: #121212;
+  --bgColor: #222;
   color: var(--fontColor);
   background-color: var(--bgColor);
 }
@@ -86,7 +86,7 @@ nav a:focus {
   color: var(--fontColor);
 }
 .dark-mode nav a:hover {
-  background-color: #222222;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .dark-mode .profile {
   background-color: #222222;
@@ -126,17 +126,18 @@ main .portfolio {
 }
 main .work {
   box-sizing: border-box;
-  background-color: #191919;
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 1rem;
   padding: 1.5rem;
   min-height: 10rem;
   border-radius: 0.5rem;
   width: 90%;
   transition: 0.5s;
-  box-shadow: 0rem 0rem 0.5rem 0.1rem #000000;
+  box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
+  justify-content: center;
 }
 main .work:hover {
-  box-shadow: 0rem 0rem 1.5rem 0.5rem #000000;
+  box-shadow: 0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.5019607843);
   transform: scale(1.02);
 }
 main .work img,
@@ -149,7 +150,11 @@ main .work video {
 }
 main .work img:hover,
 main .work video:hover {
-  box-shadow: 0rem 0rem 1.5rem 0.5rem #000000;
+  box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+main .work .media {
+  display: flex;
+  justify-content: center;
 }
 main .work .hover-shadow {
   transition: 0.3s;
@@ -293,6 +298,10 @@ main .work .work-content {
 
 .cursor {
   cursor: pointer;
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
 }
 
 @media screen and (max-width: 1024px) {
